@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.194" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Acceptance testing to validate test price of products is match with total price in my cart." name="Validate search product page" time="0.011">
+<system-out><![CDATA[
+Given user is on amazon landing page........................................passed
+When user search "headphone" in search box..................................passed
+And hit enter...............................................................passed
+Then user navigated to search result page...................................passed
+When user click on Add to carts from search result page.....................passed
+And user click on My cart...................................................passed
+Then user navigate to My cart and see list of products......................passed
+]]></system-out>
+</testcase>
+</testsuite>
