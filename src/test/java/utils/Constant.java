@@ -10,10 +10,15 @@ public class Constant {
 	public PageObjectManager pageObjectMg;
 	public String landingPageproductName;
 	public String offerpageProductName;
+	public TestBase base;
+	public GenericUtils genUtils;
 	
 	public Constant() {
-		pageObjectMg=new PageObjectManager(driver);
+		base=new TestBase();
+		pageObjectMg=new PageObjectManager(base.WebDriverManager());
+		genUtils=new GenericUtils(base.WebDriverManager());
 	}
 
 
 }
+ 

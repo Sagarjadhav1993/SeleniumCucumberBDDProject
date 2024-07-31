@@ -38,23 +38,13 @@ public class OfferPageStepDefinition {
 		
 	    landPage.selectTopDeals();
 	   Thread.sleep(1000);
-	   switchtoOfferpage();
+	   cn.genUtils.SwitchWindowToChild();
 	   
 	   offers.SearchItem(shortname);
 	   Thread.sleep(1000);
 	   cn.offerpageProductName=offers.GetproductName();
 	}
-		
-	   public void switchtoOfferpage() {
-		   //skip below part , if it already switch to offer page
-		   Set<String> Windows=cn.driver.getWindowHandles();	   
-		   for (String Window : Windows) {
-			   cn.driver.switchTo().window(Window);
-	     	}
-		
-	   }
-	   
-	
+		   	
 	@Then("Validate product name in offers page matches with landing page")
 	public void validate_product_name_in_offers_page_matches_with_landing_page() {
 	    
